@@ -11,7 +11,7 @@ fun showMenuMain(){
     listOptionsMenuMain.add("Ver mis recetas")
     listOptionsMenuMain.add("Salir")
 
-    print(":: Bienvenido a Recipe Maker ::\n")
+    print("\n:: Bienvenido a Recipe Maker ::\n")
     println("Selecciona la opción deseada")
     showOptionsMenu(listOptionsMenuMain as ArrayList<String>)
 }
@@ -26,7 +26,8 @@ fun optionSelectedUser(): Int{
 }
 
 fun processOptionMenuMain(){
-    do {
+    do{
+        showMenuMain()
         print("Ingrese una opcion del menu: ")
         when(optionSelectedUser()){
             1 -> println("Opcion 1")
@@ -37,6 +38,5 @@ fun processOptionMenuMain(){
 }
 
 fun main(){
-    showMenuMain()
     processOptionMenuMain()
 }
