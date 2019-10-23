@@ -25,18 +25,19 @@ fun optionSelectedUser(): Int{
     return optionSelected
 }
 
-fun processOptionMenuMain(){
-    do{
-        showMenuMain()
-        print("Ingrese una opcion del menu: ")
-        when(optionSelectedUser()){
-            1 -> println("Opcion 1")
-            2 -> println("Opcion 2")
-            3 -> return
-        }
-    }while(true)
+fun processOptionMenuMain(): Int{
+    print("Ingrese una opcion del menu: ")
+    val option: Int = optionSelectedUser()
+    when(option){
+        1 -> println("Opcion 1")
+        2 -> println("Opcion 2")
+    }
+    return option
 }
 
 fun main(){
-    processOptionMenuMain()
+    do{
+        showMenuMain()
+        val option: Int = processOptionMenuMain()
+    }while(option != 3)
 }
